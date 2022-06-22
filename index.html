@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version. -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+          name="viewport">
+    <title>Geofence</title>
+
+    <link href="./bucket.css" rel="stylesheet">
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.94/Build/CesiumUnminified/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.94/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <!-- <script src="./Sandcastle-header.js"></script> -->
+
+    <style>
+        #toolbar {
+            overflow-y: auto;
+            max-height: calc(100% - 60px);
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border-radius: 4px;
+            margin-left: 50px;
+        }
+
+        #toolbar input {
+            vertical-align: middle;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        #toolbar input[type=text]{
+            width: 80px;
+        }
+
+        table {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="fullSize" id="cesiumContainer"></div>
+
+<div id="toolbar">
+    <select data-bind="options: types, value: currentType"></select>
+</div>
+
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+<script src="./PolygonPrimitive.js"></script>
+<script src="./PolylinePrimitive.js"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>
